@@ -1,13 +1,10 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <!-- LP TÁBUAS DE FRIOS PERSONALIZADAS - BANCA PACHECO - v2.0 -->
+    <!-- LP TÁBUAS DE FRIOS PERSONALIZADAS - BANCA PACHECO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     
     <!-- Performance & Security -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -53,16 +50,6 @@
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#495234">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16620453518"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16620453518');
-    </script>
     
     <style>
         :root {
@@ -1370,7 +1357,7 @@
     <header class="site-header">
         <div class="header-container">
             <div class="header-logo">
-                <img src="logo banca pacheco.png" alt="Banca Pacheco Logo" width="150" height="50">
+                <img src="../05-lp-queijos-frios/logo banca pacheco.webp" alt="Banca Pacheco Logo" width="150" height="50">
             </div>
             <button onclick="scrollToFooter()" class="header-btn" aria-label="Ver locais das bancas">
                 📍 Ver Local das Bancas
@@ -1474,7 +1461,7 @@
             <h2 class="section-title">Nossas Localizações</h2>
             <div class="bancas-grid">
                 <div class="banca-card">
-                    <img src="Imagens das bancas/banca-beira-mar.webp" alt="Banca Pacheco Beiramar" class="banca-img" width="180" height="135" loading="lazy">
+                    <img src="../05-lp-queijos-frios/Imagens das bancas/banca-beira-mar.webp" alt="Banca Pacheco Beiramar" class="banca-img" width="180" height="135" loading="lazy">
                     <div class="banca-info">
                         <h3>Banca Pacheco Beiramar</h3>
                         <p>📍 Florianópolis - SC<br>Shopping Beiramar</p>
@@ -1484,7 +1471,7 @@
                     </div>
                 </div>
                 <div class="banca-card">
-                    <img src="Imagens das bancas/banca-coqueiros.webp" alt="Banca Pacheco Coqueiros" class="banca-img" width="180" height="135" loading="lazy">
+                    <img src="../05-lp-queijos-frios/Imagens das bancas/banca-coqueiros.webp" alt="Banca Pacheco Coqueiros" class="banca-img" width="180" height="135" loading="lazy">
                     <div class="banca-info">
                         <h3>Banca Pacheco Coqueiros</h3>
                         <p>📍 Florianópolis - SC<br>Bairro Coqueiros</p>
@@ -1494,7 +1481,7 @@
                     </div>
                 </div>
                 <div class="banca-card">
-                    <img src="Imagens das bancas/banca-campinas.webp" alt="Banca Pacheco Campinas" class="banca-img" width="180" height="135" loading="lazy">
+                    <img src="../05-lp-queijos-frios/Imagens das bancas/banca-campinas.webp" alt="Banca Pacheco Campinas" class="banca-img" width="180" height="135" loading="lazy">
                     <div class="banca-info">
                         <h3>Banca Pacheco Campinas</h3>
                         <p>📍 São José - SC<br>Bairro Campinas</p>
@@ -1504,7 +1491,7 @@
                     </div>
                 </div>
                 <div class="banca-card">
-                    <img src="Imagens das bancas/banca-santa-monica-0023.webp" alt="Banca Pacheco Santa Mônica" class="banca-img" width="180" height="135" loading="lazy">
+                    <img src="../05-lp-queijos-frios/Imagens das bancas/banca-santa-monica-0023.webp" alt="Banca Pacheco Santa Mônica" class="banca-img" width="180" height="135" loading="lazy">
                     <div class="banca-info">
                         <h3>Banca Pacheco Santa Mônica</h3>
                         <p>📍 Florianópolis - SC<br>Bairro Santa Mônica</p>
@@ -1612,7 +1599,7 @@
 
     <!-- WhatsApp Float Button -->
     <a href="javascript:void(0)" class="whatsapp-float" onclick="abrirWhatsApp('Atendimento Geral')" title="WhatsApp" aria-label="Abrir WhatsApp">
-        <img src="whatsappicon.webp" alt="WhatsApp Atendimento" width="42" height="42" decoding="async">
+        <img src="../05-lp-queijos-frios/whatsappicon.webp" alt="WhatsApp Atendimento" width="42" height="42" decoding="async">
     </a>
 
     <!-- Modal Captura WhatsApp -->
@@ -2079,17 +2066,6 @@
                 });
             }
 
-            // Envia evento de conversão para Google Ads
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-16620453518',
-                    'event_category': 'Lead',
-                    'event_label': capturaProduto || 'Tábuas de Frios',
-                    'value': 0,
-                    'currency': 'BRL'
-                });
-            }
-
             // Envia tracking completo
             enviarWebhook({
                 telefone: telefone,
@@ -2171,30 +2147,9 @@
                 }, 250);
             });
 
-            // Enter para enviar e máscara de telefone
+            // Enter para enviar
             const inputTelefone = document.getElementById('telefoneCaptura');
             if (inputTelefone) {
-                // Máscara de telefone brasileiro
-                inputTelefone.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
-                    
-                    if (value.length > 11) {
-                        value = value.substring(0, 11); // Limita a 11 dígitos
-                    }
-                    
-                    // Aplica a máscara
-                    if (value.length <= 10) {
-                        // Formato: (DD) DDDD-DDDD
-                        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
-                    } else {
-                        // Formato: (DD) DDDDD-DDDD
-                        value = value.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
-                    }
-                    
-                    e.target.value = value;
-                });
-
-                // Enter para enviar
                 inputTelefone.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
                         enviarCaptura();
