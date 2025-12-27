@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16620453518"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16620453518');
+    </script>
+
     <!-- LP TÁBUAS DE FRIOS PERSONALIZADAS - BANCA PACHECO - v2.0 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -648,201 +658,6 @@
             width: 42px;
             height: 42px;
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
-        }
-
-        /* ===== MODAL ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.75);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 20px;
-            padding: 40px 30px;
-            max-width: 500px;
-            width: 100%;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2rem;
-            color: #999;
-            cursor: pointer;
-            background: none;
-            border: none;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close:hover {
-            color: #333;
-        }
-
-        .modal h3 {
-            font-size: 1.8rem;
-            color: var(--cor-primaria);
-            margin-bottom: 15px;
-        }
-
-        .modal p {
-            font-size: 1rem;
-            color: var(--cor-texto-claro);
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .modal input {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .modal input:focus {
-            outline: none;
-            border-color: var(--cor-primaria);
-        }
-
-        .modal-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .modal-btn {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .modal-btn-cancel {
-            background: #e0e0e0;
-            color: #666;
-        }
-
-        .modal-btn-cancel:hover {
-            background: #ccc;
-        }
-
-        .modal-btn-submit {
-            background: var(--cor-primaria);
-            color: white;
-        }
-
-        .modal-btn-submit:hover {
-            background: var(--cor-secundaria);
-            transform: scale(1.05);
-        }
-
-        /* ===== PASSOS DO MODAL ===== */
-        .modal-step {
-            display: none;
-        }
-
-        .modal-step.active {
-            display: block;
-            animation: fadeInStep 0.4s ease;
-        }
-
-        @keyframes fadeInStep {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .bancas-selector {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .banca-btn {
-            background: linear-gradient(135deg, var(--cor-primaria), #2a301e);
-            color: white;
-            border: 3px solid transparent;
-            border-radius: 12px;
-            padding: 20px 15px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .banca-btn small {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-
-        .banca-btn:hover {
-            transform: translateY(-3px);
-            border-color: var(--cor-destaque);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .banca-btn:active {
-            transform: translateY(0);
-        }
-
-        /* ===== BOTÕES DE DIA E HORÁRIO ===== */
-        .dia-btn, .horario-btn {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 10px 8px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            color: var(--cor-primaria);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .dia-btn:hover, .horario-btn:hover {
-            border-color: var(--cor-primaria);
-            background: #f9f9f9;
-            transform: translateY(-2px);
-        }
-
-        .dia-btn.selected, .horario-btn.selected {
-            background: var(--cor-primaria);
-            color: white;
-            border-color: var(--cor-primaria);
-            box-shadow: 0 4px 12px rgba(73, 82, 52, 0.3);
-        }
-
-        .dia-btn:active, .horario-btn:active {
-            transform: translateY(0);
-        }
-
-        @media (max-width: 500px) {
-            .bancas-selector {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* ===== LOCALIZAÇÕES ===== */
@@ -1510,7 +1325,7 @@
                 <button class="cta-button" onclick="scrollToProdutos()" aria-label="Ver tamanhos disponíveis">
                     🧀 Ver Tamanhos
                 </button>
-                <button class="cta-button cta-button-secondary" onclick="abrirWhatsApp('Hero - Contato Direto')" aria-label="Entrar em contato via WhatsApp">
+                <button class="cta-button cta-button-secondary" onclick="abrirWhatsApp('Fazer Pedido', 'hero')" aria-label="Entrar em contato via WhatsApp">
                     💬 Fazer Pedido
                 </button>
             </div>
@@ -1701,133 +1516,9 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="javascript:void(0)" class="whatsapp-float" onclick="abrirWhatsApp('Atendimento Geral')" title="WhatsApp" aria-label="Abrir WhatsApp">
+    <a href="javascript:void(0)" class="whatsapp-float" onclick="abrirWhatsApp('Atendimento Geral', 'float')" title="WhatsApp" aria-label="Abrir WhatsApp">
         <img src="../05-lp-queijos-frios/whatsappicon.webp" alt="WhatsApp Atendimento" width="42" height="42" decoding="async">
     </a>
-
-    <!-- Modal Captura WhatsApp - Sistema 4 Passos -->
-    <div id="modalCapturaNome" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="fecharCaptura()">&times;</button>
-            
-            <!-- PASSO 1: Telefone -->
-            <div id="passo1" class="modal-step active">
-                <h3>📱 Digite seu WhatsApp</h3>
-                <p>✅ Vamos lhe chamar no WhatsApp para montar sua tábua personalizada!</p>
-                <input type="tel" id="telefoneCaptura" placeholder="Seu WhatsApp (com DDD)" aria-label="Digite seu telefone">
-                <div class="modal-buttons">
-                    <button class="modal-btn modal-btn-cancel" onclick="fecharCaptura()">Cancelar</button>
-                    <button class="modal-btn modal-btn-submit" onclick="irParaPasso2()">Continuar →</button>
-                </div>
-            </div>
-
-            <!-- PASSO 2: Desconto + Seleção de Banca -->
-            <div id="passo2" class="modal-step">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <div style="font-size: 3rem; margin-bottom: 10px;">🎉</div>
-                    <h3 style="color: #25D366; font-size: 1.8rem; margin-bottom: 10px;">Parabéns!</h3>
-                    <p style="font-size: 1.3rem; font-weight: 700; color: var(--cor-primaria);">Você ganhou <span style="color: #25D366;">20% de DESCONTO</span></p>
-                    <p style="font-size: 1rem; color: #666; margin-top: 10px;">Selecione a banca de sua preferência:</p>
-                </div>
-                <div class="bancas-selector">
-                    <button class="banca-btn" onclick="selecionarBanca('Beiramar Shopping')">
-                        Beiramar Shopping<br>
-                        <small>Florianópolis - SC</small>
-                    </button>
-                    <button class="banca-btn" onclick="selecionarBanca('Coqueiros')">
-                        Coqueiros<br>
-                        <small>Florianópolis - SC</small>
-                    </button>
-                    <button class="banca-btn" onclick="selecionarBanca('Campinas')">
-                        Campinas<br>
-                        <small>São José - SC</small>
-                    </button>
-                    <button class="banca-btn" onclick="selecionarBanca('Santa Mônica')">
-                        Santa Mônica<br>
-                        <small>Florianópolis - SC</small>
-                    </button>
-                </div>
-            </div>
-
-            <!-- PASSO 3: Agendar Data e Horário -->
-            <div id="passo3" class="modal-step">
-                <h3>📅 Quando você prefere ir?</h3>
-                <p id="bancaSelecionada" style="text-align: center; font-weight: 600; color: var(--cor-primaria); margin-bottom: 15px;"></p>
-                
-                <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; color: var(--cor-primaria);">📆 Dia:</label>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px;">
-                    <button class="dia-btn" data-dia="0" onclick="selecionarDia(0)">Hoje</button>
-                    <button class="dia-btn" data-dia="1" onclick="selecionarDia(1)">Amanhã</button>
-                    <button class="dia-btn" data-dia="2" onclick="selecionarDia(2)">Seg</button>
-                    <button class="dia-btn" data-dia="3" onclick="selecionarDia(3)">Ter</button>
-                    <button class="dia-btn" data-dia="4" onclick="selecionarDia(4)">Qua</button>
-                    <button class="dia-btn" data-dia="5" onclick="selecionarDia(5)">Qui</button>
-                    <button class="dia-btn" data-dia="6" onclick="selecionarDia(6)">Sex</button>
-                    <button class="dia-btn" data-dia="7" onclick="selecionarDia(7)">Sáb</button>
-                    <button class="dia-btn" data-dia="8" onclick="selecionarDia(8)">Dom</button>
-                </div>
-                
-                <label style="display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.95rem; color: var(--cor-primaria);">🕐 Horário:</label>
-                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 15px;">
-                    <button class="horario-btn" onclick="selecionarHorario('09:00')">09h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('10:00')">10h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('11:00')">11h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('12:00')">12h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('13:00')">13h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('14:00')">14h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('15:00')">15h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('16:00')">16h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('17:00')">17h</button>
-                    <button class="horario-btn" onclick="selecionarHorario('18:00')">18h</button>
-                </div>
-
-                <!-- Preview da seleção -->
-                <div id="previewAgendamento" style="display: none; text-align: center; padding: 15px; background: #f0f8f0; border-radius: 10px; margin-bottom: 20px; border: 2px solid #25D366;">
-                    <p style="margin: 0; font-weight: 700; color: #25D366; font-size: 1.05rem;">✅ Agendamento:</p>
-                    <p id="previewTexto" style="margin: 8px 0 0 0; font-weight: 600; color: var(--cor-primaria); font-size: 1rem;"></p>
-                </div>
-
-                <div class="modal-buttons">
-                    <button class="modal-btn modal-btn-cancel" onclick="mostrarPasso(2)">← Voltar</button>
-                    <button class="modal-btn modal-btn-submit" onclick="finalizarAgendamento()">Confirmar</button>
-                </div>
-            </div>
-
-            <!-- PASSO 4: Confirmação -->
-            <div id="passo4" class="modal-step">
-                <div style="text-align: center;">
-                    <div style="font-size: 4rem; margin-bottom: 15px;">✅</div>
-                    <h3 style="color: #25D366; font-size: 1.8rem; margin-bottom: 15px;">Agendamento Confirmado!</h3>
-                    <p style="font-size: 1.1rem; color: #333; line-height: 1.6; margin-bottom: 20px;">
-                        <strong>📅 <span id="confirmacaoData"></span></strong><br>
-                        <strong>🕐 <span id="confirmacaoHorario"></span></strong><br>
-                        <strong>📍 <span id="confirmacaoBanca"></span></strong>
-                    </p>
-                    <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 8px; text-align: left;">
-                        <p style="margin: 0; font-size: 0.95rem; color: #856404; line-height: 1.5;">
-                            <strong>⚠️ Importante:</strong> O desconto de 20% só será válido se você comparecer na data e horário agendados. Não perca essa oportunidade!
-                        </p>
-                    </div>
-                    <p style="font-size: 1rem; color: #666; margin-bottom: 20px;">
-                        Estamos enviando uma confirmação no WhatsApp!
-                    </p>
-                    <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid #e0e0e0;">
-                        <p style="font-size: 1rem; color: #495234; margin-bottom: 12px; font-weight: 600;">📸 Visite nosso Instagram</p>
-                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Conheça mais produtos da Banca Pacheco</p>
-                        <a href="https://www.instagram.com/bancapacheco" target="_blank" rel="noopener noreferrer" 
-                           style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(131, 58, 180, 0.3);"
-                           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(131, 58, 180, 0.4)';"
-                           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(131, 58, 180, 0.3)';">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                            @bancapacheco
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal de Vídeo -->
     <div id="videoModal" class="video-modal">
@@ -2167,274 +1858,53 @@
             }
         }
 
-        // ===== VARIÁVEIS PARA CAPTURA =====
-        let capturaAcao = 'whatsapp';
-        let capturaProduto = '';
-        let capturaSecao = '';
-
-        // ===== DADOS DO AGENDAMENTO =====
-        let dadosAgendamento = {
-            telefone: '',
-            banca: '',
-            dataCompleta: null,
-            horarioSelecionado: '',
-            produto: ''
-        };
-
-        // ===== ABRIR MODAL DE CAPTURA PARA WHATSAPP =====
-        function abrirWhatsApp(produto, secao = 'produtos') {
-            capturaAcao = 'whatsapp';
-            capturaProduto = produto;
-            capturaSecao = secao;
-            dadosAgendamento.produto = produto;
-            
-            document.getElementById('modalCapturaNome').style.display = 'flex';
-            mostrarPasso(1);
-            document.getElementById('telefoneCaptura').focus();
-        }
-
-        // ===== FECHAR MODAL DE CAPTURA =====
-        function fecharCaptura() {
-            document.getElementById('modalCapturaNome').style.display = 'none';
-            document.getElementById('telefoneCaptura').value = '';
-            mostrarPasso(1);
-            
-            // Reset dados
-            dadosAgendamento = {
-                telefone: '',
-                banca: '',
-                dataCompleta: null,
-                horarioSelecionado: '',
-                produto: ''
-            };
-            
-            // Remove seleções
-            document.querySelectorAll('.dia-btn.selected').forEach(btn => btn.classList.remove('selected'));
-            document.querySelectorAll('.horario-btn.selected').forEach(btn => btn.classList.remove('selected'));
-            document.getElementById('previewAgendamento').style.display = 'none';
-            
-            capturaAcao = '';
-            capturaProduto = '';
-        }
-
-        // ===== CONTROLE DOS PASSOS DO MODAL =====
-        function mostrarPasso(numeroPasso) {
-            document.querySelectorAll('.modal-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            document.getElementById(`passo${numeroPasso}`).classList.add('active');
-        }
-
-        function irParaPasso2() {
-            const telefone = document.getElementById('telefoneCaptura').value.trim();
-            
-            if (!telefone) {
-                alert('Por favor, informe seu WhatsApp (com DDD).');
-                return;
-            }
-            
-            dadosAgendamento.telefone = telefone;
-            mostrarPasso(2);
-        }
-
-        function selecionarBanca(nomeBanca) {
-            dadosAgendamento.banca = nomeBanca;
-            document.getElementById('bancaSelecionada').textContent = `📍 Banca: ${nomeBanca}`;
-            mostrarPasso(3);
-        }
-
-        function selecionarDia(diasParaAdicionar) {
-            // Remove seleção anterior
-            document.querySelectorAll('.dia-btn').forEach(btn => btn.classList.remove('selected'));
-            
-            // Adiciona seleção no botão clicado
-            const btnClicado = document.querySelector(`.dia-btn[data-dia="${diasParaAdicionar}"]`);
-            if (btnClicado) {
-                btnClicado.classList.add('selected');
-            }
-            
-            const hoje = new Date();
-            let dataEscolhida;
-            
-            if (diasParaAdicionar === 0) {
-                // Hoje
-                dataEscolhida = new Date(hoje);
-            } else if (diasParaAdicionar === 1) {
-                // Amanhã
-                dataEscolhida = new Date(hoje);
-                dataEscolhida.setDate(dataEscolhida.getDate() + 1);
-            } else {
-                // Dias da semana (2=Segunda, 3=Terça, ..., 8=Domingo)
-                // Mapeamento: 2=1(Segunda), 3=2(Terça), 4=3(Quarta), 5=4(Quinta), 6=5(Sexta), 7=6(Sábado), 8=0(Domingo)
-                const diaDaSemanaMapeado = diasParaAdicionar === 8 ? 0 : diasParaAdicionar - 1;
-                
-                dataEscolhida = new Date(hoje);
-                const diaAtual = dataEscolhida.getDay();
-                let diasParaSomar = diaDaSemanaMapeado - diaAtual;
-                
-                // Se o dia já passou nesta semana, vai para a próxima semana
-                if (diasParaSomar <= 0) {
-                    diasParaSomar += 7;
-                }
-                
-                dataEscolhida.setDate(dataEscolhida.getDate() + diasParaSomar);
-            }
-            
-            dadosAgendamento.dataCompleta = dataEscolhida;
-            atualizarPreviewAgendamento();
-        }
-
-        function selecionarHorario(horario) {
-            // Remove seleção anterior
-            document.querySelectorAll('.horario-btn').forEach(btn => btn.classList.remove('selected'));
-            
-            // Adiciona seleção no botão clicado
-            event.target.classList.add('selected');
-            
-            dadosAgendamento.horarioSelecionado = horario;
-            atualizarPreviewAgendamento();
-        }
-
-        function atualizarPreviewAgendamento() {
-            const preview = document.getElementById('previewAgendamento');
-            const previewTexto = document.getElementById('previewTexto');
-            
-            if (dadosAgendamento.dataCompleta && dadosAgendamento.horarioSelecionado) {
-                const dataFormatada = dadosAgendamento.dataCompleta.toLocaleDateString('pt-BR', {
-                    weekday: 'long',
-                    day: 'numeric',
-                    month: 'long'
-                });
-                previewTexto.textContent = `${dataFormatada} às ${dadosAgendamento.horarioSelecionado}`;
-                preview.style.display = 'block';
-            } else {
-                preview.style.display = 'none';
-            }
-        }
-
-        function formatarDataParaWebhook(data, horario) {
-            const meses = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-            const dia = String(data.getDate()).padStart(2, '0');
-            const mes = meses[data.getMonth()];
-            const ano = data.getFullYear();
-            
-            // Converte horário de 24h para 12h com AM/PM
-            const [hora, minuto] = horario.split(':');
-            const horaNum = parseInt(hora);
-            const periodo = horaNum >= 12 ? 'PM' : 'AM';
-            const hora12 = horaNum > 12 ? horaNum - 12 : (horaNum === 0 ? 12 : horaNum);
-            const horaFormatada = String(hora12).padStart(2, '0');
-            
-            return `${dia}-${mes}-${ano} ${horaFormatada}:${minuto} ${periodo}`;
-        }
-
-        function formatarDataBrasil(data, horario) {
-            const mesesPT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
-            const dia = data.getDate();
-            const mes = mesesPT[data.getMonth()];
-            
-            return `dia ${dia} de ${mes} às ${horario} horas`;
-        }
-
-        function calcularDataLembrete(data, diasDiferenca, horario = '09:00') {
-            const novaData = new Date(data);
-            novaData.setDate(novaData.getDate() + diasDiferenca);
-            return formatarDataParaWebhook(novaData, horario);
-        }
-
-        function finalizarAgendamento() {
-            if (!dadosAgendamento.dataCompleta || !dadosAgendamento.horarioSelecionado) {
-                alert('Por favor, selecione uma data e horário.');
-                return;
-            }
-
-            // Detecta plataforma
-            const urlPath = window.location.pathname.toLowerCase();
-            let plataforma = 'DIRETO';
-            if (urlPath.includes('/google')) {
-                plataforma = 'GOOGLE';
-            } else if (urlPath.includes('/meta')) {
-                plataforma = 'META';
-            }
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const utmSource = urlParams.get('utm_source');
-            if (utmSource) {
-                if (utmSource.toLowerCase().includes('google')) plataforma = 'GOOGLE';
-                if (utmSource.toLowerCase().includes('meta') || utmSource.toLowerCase().includes('facebook') || utmSource.toLowerCase().includes('instagram')) plataforma = 'META';
-            }
-
-            const dataRegistro = new Date();
-            const dataFormatada = dataRegistro.toLocaleString('pt-BR', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
-            });
-
-            // Formatar datas para webhook
-            const dataHoraAgendamento = formatarDataParaWebhook(dadosAgendamento.dataCompleta, dadosAgendamento.horarioSelecionado);
-            const dataHoraAgendamentoBrasil = formatarDataBrasil(dadosAgendamento.dataCompleta, dadosAgendamento.horarioSelecionado);
-            const dataLembrete1DiaDepois = calcularDataLembrete(dadosAgendamento.dataCompleta, 1);
-            const dataLembrete1DiaAntes = calcularDataLembrete(dadosAgendamento.dataCompleta, -1);
-            const dataLembrete5DiasAntes = calcularDataLembrete(dadosAgendamento.dataCompleta, -5);
-
-            // Envia Meta Pixel Event
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Schedule', {
-                    content_name: dadosAgendamento.produto,
-                    content_category: 'Agendamento Tábuas de Frios',
-                    value: 20,
-                    currency: 'BRL'
-                });
-            }
-
-            // Envia Google Ads Conversion Event
+        // ===== REDIRECIONAMENTO DIRETO PARA WHATSAPP COM TRACKING =====
+        
+        // Função universal para rastrear conversões
+        function trackConversion(callback) {
+            // Dispara evento de conversão do Google Ads
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'conversion', {
-                    'send_to': 'AW-16449685513/W7J9CKTAztMbEImQ6aM9',
+                    'send_to': 'AW-16449685513/e0ywCKOr6tcbEImQ6aM9',
                     'value': 1.0,
-                    'currency': 'BRL'
+                    'currency': 'BRL',
+                    'event_callback': callback
                 });
+            } else {
+                // Se gtag não estiver disponível, executa o callback diretamente
+                callback();
             }
-
-            // Envia webhook com todos os dados
-            enviarWebhook({
-                telefone: dadosAgendamento.telefone,
-                banca: dadosAgendamento.banca,
-                data_hora_agendamento: dataHoraAgendamento,
-                data_hora_agendamento_brasil: dataHoraAgendamentoBrasil,
-                data_lembrete_1_dia_depois: dataLembrete1DiaDepois,
-                data_lembrete_1_dia_antes: dataLembrete1DiaAntes,
-                data_lembrete_5_dias_antes: dataLembrete5DiasAntes,
-                produto: dadosAgendamento.produto,
-                tipo_acao: 'agendamento_desconto_20_tabuas',
-                desconto: '20%',
-                plataforma: plataforma,
-                fonte: 'LP Tábuas de Frios Personalizadas - Banca Pacheco',
-                quando: dataFormatada,
-                timestamp: dataRegistro.toISOString(),
-                url_origem: window.location.href,
-                utm_source: urlParams.get('utm_source') || '',
-                utm_medium: urlParams.get('utm_medium') || '',
-                utm_campaign: urlParams.get('utm_campaign') || ''
+            return false;
+        }
+        
+        function abrirWhatsApp(produto, secao = 'produtos') {
+            // Mensagens personalizadas por contexto
+            let mensagem = '';
+            
+            if (secao === 'hero') {
+                mensagem = '🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱 Vim da página Tábuas de Frios.';
+            } else if (secao === 'localizacoes') {
+                mensagem = `🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios na ${produto}! 📱 Vim da página Tábuas de Frios.`;
+            } else if (produto && produto.includes('Pequena')) {
+                mensagem = '🧀 Olá! Tenho interesse na *Tábua Pequena (serve 4-6 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+            } else if (produto && produto.includes('Média')) {
+                mensagem = '🧀 Olá! Tenho interesse na *Tábua Média (serve 8-10 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+            } else if (produto && produto.includes('Grande')) {
+                mensagem = '🧀 Olá! Tenho interesse na *Tábua Grande (serve 12-15 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+            } else if (produto && produto.includes('Extra Grande')) {
+                mensagem = '🧀 Olá! Tenho interesse na *Tábua Extra Grande (serve 18-20 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+            } else {
+                mensagem = '🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱 Vim da página Tábuas de Frios.';
+            }
+            
+            // Codifica a mensagem para URL
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            const urlWhatsApp = `https://api.whatsapp.com/send/?phone=5548984118953&text=${mensagemCodificada}`;
+            
+            // Dispara evento de conversão do Google Ads e abre WhatsApp
+            trackConversion(function() {
+                window.location.href = urlWhatsApp;
             });
-
-            // Atualiza tela de confirmação
-            const dataConfirmacao = dadosAgendamento.dataCompleta.toLocaleDateString('pt-BR', {
-                weekday: 'long',
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
-            document.getElementById('confirmacaoData').textContent = dataConfirmacao;
-            document.getElementById('confirmacaoHorario').textContent = dadosAgendamento.horarioSelecionado;
-            document.getElementById('confirmacaoBanca').textContent = dadosAgendamento.banca;
-
-            // Mostra passo final
-            mostrarPasso(4);
         }
 
         // ===== EFEITO DE ROTAÇÃO COM SCROLL =====
@@ -2492,25 +1962,8 @@
                     renderizarGaleriaInstagram();
                 }, 250);
             });
-
-            // Enter para enviar
-            const inputTelefone = document.getElementById('telefoneCaptura');
-            if (inputTelefone) {
-                inputTelefone.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        enviarCaptura();
-                    }
-                });
-            }
         });
-
-        // Fechar modal ao clicar fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('modalCapturaNome');
-            if (event.target === modal) {
-                fecharCaptura();
-            }
-        }
+    </script>
     </script>
 
 </body>
