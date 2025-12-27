@@ -1882,19 +1882,21 @@
             let mensagem = '';
             
             if (secao === 'hero') {
-                mensagem = '🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱';
             } else if (secao === 'localizacoes') {
-                mensagem = `🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios na ${produto}! 📱 Vim da página Tábuas de Frios.`;
+                mensagem = `🧀 Olá, vim pelo Google! Gostaria de fazer um pedido de Tábua de Frios na ${produto}! 📱`;
+            } else if (secao === 'float') {
+                mensagem = '🧀 Olá, vim pelo Google! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱';
             } else if (produto && produto.includes('Pequena')) {
-                mensagem = '🧀 Olá! Tenho interesse na *Tábua Pequena (serve 4-6 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Tenho interesse na *Tábua Pequena (serve 4-6 pessoas)*! Gostaria de saber mais detalhes. 📱';
             } else if (produto && produto.includes('Média')) {
-                mensagem = '🧀 Olá! Tenho interesse na *Tábua Média (serve 8-10 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Tenho interesse na *Tábua Média (serve 8-10 pessoas)*! Gostaria de saber mais detalhes. 📱';
             } else if (produto && produto.includes('Grande')) {
-                mensagem = '🧀 Olá! Tenho interesse na *Tábua Grande (serve 12-15 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Tenho interesse na *Tábua Grande (serve 12-15 pessoas)*! Gostaria de saber mais detalhes. 📱';
             } else if (produto && produto.includes('Extra Grande')) {
-                mensagem = '🧀 Olá! Tenho interesse na *Tábua Extra Grande (serve 18-20 pessoas)*! Gostaria de saber mais detalhes. 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Tenho interesse na *Tábua Extra Grande (serve 18-20 pessoas)*! Gostaria de saber mais detalhes. 📱';
             } else {
-                mensagem = '🧀 Olá! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱 Vim da página Tábuas de Frios.';
+                mensagem = '🧀 Olá, vim pelo Google! Gostaria de fazer um pedido de Tábua de Frios Personalizada! 📱';
             }
             
             // Codifica a mensagem para URL
